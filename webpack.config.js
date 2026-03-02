@@ -8,4 +8,9 @@ export default {
         path: path.resolve(import.meta.dirname,"dist"),
         clean: true,
     },
+    plugins: [
+        newHtmlWebpackPlugin({
+            template: "./src/template.html"
+        })
+    ]
 };
