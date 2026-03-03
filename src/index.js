@@ -2,7 +2,7 @@ const main = document.querySelector(".main");
 
 
 async function getData(city){
-    // let city = "Melbourne";
+    let city = "Melbourne";
     let temp_unit = "metric"
     const str = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + city + "?unitGroup=" + temp_unit + "&key=GDGU3H48VVK9DYU3DKVF5V3UK&contentType=json";
     const response = await fetch(str,{mode:"cors"});
