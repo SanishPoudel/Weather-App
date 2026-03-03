@@ -1,4 +1,3 @@
-console.log("hello");
 const main = document.querySelector(".main");
 
 
