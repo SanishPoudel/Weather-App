@@ -1,25 +1,10 @@
+import { displayToday } from "./dom.js"
+
 const main = document.querySelector(".main");
-const temperature = document.querySelector(".temp");
-const maxTemp = document.querySelector(".maxTemp");
-const minTemp = document.querySelector(".minTemp");
-const today = document.querySelector(".day");
-const place = document.querySelector(".place");
 const btn = document.querySelector("button");
 const inputValue = document.querySelector("input");
 
-function displayToday(todayData) {
-    let temp = todayData["temp"];
-    let tempmin = todayData["tempmin"];
-    let tempmax = todayData["tempmax"];
-    let day = todayData["datetimeEpoch"];
 
-    
-    temperature.textContent = temp;
-    maxTemp.textContent = tempmax;
-    minTemp.textContent = tempmin;
-    today.textContent = day;
-    place.textContent = inputValue.value;
-}
 
 async function getData(city) {
     let temp_unit = "metric"
