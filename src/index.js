@@ -1,4 +1,5 @@
-import { displayToday } from "./displayToday.js"
+import "./style.css";
+import { displayToday } from "./displayToday.js";
 import { otherDays } from "./otherDays.js";
 
 const main = document.querySelector(".main");
