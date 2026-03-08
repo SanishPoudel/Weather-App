@@ -1,13 +1,9 @@
+import { getWeekday } from "./getWeekday.js";
+
 function displayToday(todayData) {
 
     // query selectors
-    // const temperature = document.querySelector(".temp");
-    // const maxTemp = document.querySelector(".maxTemp");
-    // const minTemp = document.querySelector(".minTemp");
-    // const today = document.querySelector(".day");
-    // const place = document.querySelector(".place");
     const inputValue = document.querySelector("input");
-
     const div = document.querySelector(".main");
 
     //creating nodes
@@ -22,11 +18,7 @@ function displayToday(todayData) {
     let temp = todayData["temp"];
     let tempmin = todayData["tempmin"];
     let tempmax = todayData["tempmax"];
-    
-    // need to fix this...................................................................................
-    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    const d = new Date();
-    let day = weekday[d.getDay()];
+    let day = getWeekday(new Date());
 
     // adding variable to the dom
     temperature.textContent = temp;
