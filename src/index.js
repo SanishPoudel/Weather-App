@@ -2,6 +2,7 @@ import { displayToday } from "./displayToday.js"
 import { otherDays } from "./otherDays.js";
 
 const main = document.querySelector(".main");
+const other = document.querySelector(".other");
 const btn = document.querySelector("button");
 const inputValue = document.querySelector("input");
 
@@ -27,9 +28,16 @@ async function getData(city) {
 
 }
 
-
+function clearDiv(div) {
+    // function to clear all contents in a div
+    while (div.firstChild) {
+        div.removeChild(div.lastChild);
+    }
+}
 
 btn.addEventListener("click", (event)=> {
     event.preventDefault();
+    clearDiv(main);
+    clearDiv(other);
     getData(inputValue.value);
 });
