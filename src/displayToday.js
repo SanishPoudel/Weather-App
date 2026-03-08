@@ -21,11 +21,11 @@ function displayToday(todayData) {
     let day = getWeekday(new Date());
 
     // adding variable to the dom
-    temperature.textContent = temp;
-    maxTemp.textContent = tempmax;
-    minTemp.textContent = tempmin;
-    today.textContent = day;
-    place.textContent = inputValue.value;
+    temperature.textContent = "Temperature: " + temp;
+    maxTemp.textContent = "Maximum temperature: " + tempmax;
+    minTemp.textContent = "Minimum temperature: " + tempmin;
+    today.textContent = "Day: " + day;
+    place.textContent = "Location: " + inputValue.value;
 
     // appending to parent node
     div.appendChild(temperature);
