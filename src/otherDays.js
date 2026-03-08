@@ -6,8 +6,13 @@ function otherDays(thisWeek) {
     //query selector
     const div = document.querySelector(".other");
 
-    thisWeek.forEach(day => {
-        let weekDay = getWeekday(new Date(day["datetime"]));
+    for (let i = 1; i<7; i++) {
+        // using for loop instead of forEach because I don't need sunday
+
+        let day = thisWeek[i]; 
+
+        //converting date into day of week and storing it appropriately
+        let weekDay = getWeekday(new Date(day["datetime"])); 
         let value = weekDay + " : " + day["temp"];
 
         // creating child node
@@ -18,7 +23,7 @@ function otherDays(thisWeek) {
 
         // appending child node to parent
         div.appendChild(valueSection);
-    });
+    }
 }
 
 export { otherDays }
