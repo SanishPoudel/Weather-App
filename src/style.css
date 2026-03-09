@@ -38,27 +38,32 @@ button {
     border-color: #eb6f4c;
 }
 
+/* for flex */
+
 .main {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     font-size: xx-large;
     font-weight: bold;
     color: #1e212d;
     text-align: center;
+    align-items: flex-start;
 }
 
 .other {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     font-size: xx-large;
+    font-weight: bold;
     color: #1e212d;
     text-align: center;
+    align-items: flex-start;
 }
 
-.context {
-    padding-top: 50%;
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: 10%;
 }
