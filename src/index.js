@@ -6,8 +6,7 @@ const main = document.querySelector(".main");
 const other = document.querySelector(".other");
 const btn = document.querySelector("button");
 const inputValue = document.querySelector("input");
-
-
+const content = document.querySelector(".content");
 
 async function getData(city) {
     let temp_unit = "metric"
@@ -26,7 +25,6 @@ async function getData(city) {
     
     displayToday(todayData);
     otherDays(thisWeek);
-
 }
 
 function clearDiv(div) {
@@ -41,4 +39,10 @@ btn.addEventListener("click", (event)=> {
     clearDiv(main);
     clearDiv(other);
     getData(inputValue.value);
+
+    content.style.display = "grid";
+    content.style["grid-template-column"] = "2fr 0.5fr 2fr";
+    main.style["grid-column"] = "1/3";
+    other.style["grid-column"] = "3/3";
+    content.style.gap = "10%";
 });
