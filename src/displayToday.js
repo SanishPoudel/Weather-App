@@ -12,6 +12,7 @@ function displayToday(todayData) {
     const minTemp = document.createElement("div");
     const today = document.createElement("div");
     const place = document.createElement("div");
+    const heading = document.createElement("h3");
     
 
     // assigning variables to hold values
@@ -25,14 +26,17 @@ function displayToday(todayData) {
     maxTemp.textContent = "Maximum temperature: " + tempmax;
     minTemp.textContent = "Minimum temperature: " + tempmin;
     today.textContent = "Day: " + day;
-    place.textContent = "Location: " + inputValue.value;
+    heading.textContent = "Weather data for today"
+    place.textContent = "Location: " + inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
 
     // appending to parent node
+    div.appendChild(heading);
+    div.appendChild(place);
+    div.appendChild(today);
     div.appendChild(temperature);
     div.appendChild(maxTemp);
     div.appendChild(minTemp);
-    div.appendChild(today);
-    div.appendChild(place);
+    
 }
 
 export { displayToday }
