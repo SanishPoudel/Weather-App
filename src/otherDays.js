@@ -6,6 +6,11 @@ function otherDays(thisWeek) {
     //query selector
     const div = document.querySelector(".other");
 
+    //heading
+    const heading = document.createElement("h3");
+    heading.textContent = "Weather data for upcoming days";
+    div.appendChild(heading);
+
     for (let i = 1; i<7; i++) {
         // using for loop instead of forEach because I don't need sunday
 
