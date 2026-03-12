@@ -19,15 +19,19 @@ function otherDays(thisWeek) {
         //converting date into day of week and storing it appropriately
         let weekDay = getWeekday(new Date(day["datetime"])); 
         let value = weekDay + " : " + day["temp"];
+        let status = day["conditions"];
 
         // creating child node
         const valueSection = document.createElement("div");
+        const condition = document.createElement("div");
         
         // assigning value to child node
         valueSection.textContent = value;
+        condition.textContent = status;
 
         // appending child node to parent
         div.appendChild(valueSection);
+        div.appendChild(condition);
     }
 }
 

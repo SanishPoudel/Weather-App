@@ -13,6 +13,7 @@ function displayToday(todayData) {
     const today = document.createElement("div");
     const place = document.createElement("div");
     const heading = document.createElement("h3");
+    const condition = document.createElement("div");
     
 
     // assigning variables to hold values
@@ -20,6 +21,7 @@ function displayToday(todayData) {
     let tempmin = todayData["tempmin"];
     let tempmax = todayData["tempmax"];
     let day = getWeekday(new Date());
+    let status = todayData["conditions"];
 
     // adding variable to the dom
     temperature.textContent = "Temperature: " + temp;
@@ -28,6 +30,7 @@ function displayToday(todayData) {
     today.textContent = "Day: " + day;
     heading.textContent = "Weather data for today"
     place.textContent = "Location: " + inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
+    condition.textContent = status;
 
     // appending to parent node
     div.appendChild(heading);
@@ -36,6 +39,7 @@ function displayToday(todayData) {
     div.appendChild(temperature);
     div.appendChild(maxTemp);
     div.appendChild(minTemp);
+    div.appendChild(condition);
     
 }
 
