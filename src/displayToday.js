@@ -2,6 +2,13 @@ import { getWeekday } from "./getWeekday.js";
 
 function displayToday(todayData) {
 
+    //todo
+    // get value of description
+    // fetch the icon related to description
+    // add the image into div
+    // push the div into the container
+    // add styles to the container
+
     // query selectors
     const inputValue = document.querySelector("input");
     const div = document.querySelector(".main");
@@ -21,7 +28,7 @@ function displayToday(todayData) {
     let tempmin = todayData["tempmin"];
     let tempmax = todayData["tempmax"];
     let day = getWeekday(new Date());
-    let status = todayData["conditions"];
+    let status = todayData["icon"];
 
     // adding variable to the dom
     temperature.textContent = "Temperature: " + temp;
