@@ -1,3 +1,4 @@
+import { getIcon } from "./getIcon.js";
 import { getWeekday } from "./getWeekday.js";
 
 function displayToday(todayData) {
@@ -20,7 +21,9 @@ function displayToday(todayData) {
     const today = document.createElement("div");
     const place = document.createElement("div");
     const heading = document.createElement("h3");
-    const condition = document.createElement("div");
+    
+    // need to fix this
+    const condition = document.createElement("img");
     
 
     // assigning variables to hold values
@@ -37,7 +40,9 @@ function displayToday(todayData) {
     today.textContent = "Day: " + day;
     heading.textContent = "Weather data for today"
     place.textContent = "Location: " + inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
-    condition.textContent = status;
+    
+    //need to fix this
+    condition.textContent = getIcon(status);
 
     // appending to parent node
     div.appendChild(heading);
