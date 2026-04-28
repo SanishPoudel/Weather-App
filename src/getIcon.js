@@ -12,31 +12,31 @@ import snow from "./img/snow.svg";
 import wind from "./img/wind.svg";
 
 function getIcon(status) {
-    if (status === "clear-day.svg") {
+    if (status === "clear-day") {
         return clearDay;
     }
-    else if (status === "clear-night.svg") {
+    else if (status === "clear-night") {
         return clearNight;
     }
-    else if (status === "cloudy.svg") {
+    else if (status === "cloudy") {
         return cloudy;
     }
-    else if (status === "fog.svg") {
+    else if (status === "fog") {
         return fog;
     }
-    else if (status === "partly-cloudy-day.svg") {
+    else if (status === "partly-cloudy-day") {
         return partlyCloudyDay;
     }
-    else if (status === "partly-cloudy-night.svg") {
+    else if (status === "partly-cloudy-night") {
         return partlyCloudyNight;
     }
-    else if (status === "rain.svg") {
+    else if (status === "rain") {
         return rain;
     }
-    else if (status === "snow.svg") {
+    else if (status === "snow") {
         return snow;
     }
-    else if (status === "wind.svg") {
+    else if (status === "wind") {
         return wind;
     }
 }
