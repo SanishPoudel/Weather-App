@@ -42,7 +42,7 @@ function displayToday(todayData) {
     place.textContent = "Location: " + inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
     
     //need to fix this
-    condition.textContent = getIcon(status);
+    condition.src = getIcon(status);
 
     // appending to parent node
     div.appendChild(heading);
