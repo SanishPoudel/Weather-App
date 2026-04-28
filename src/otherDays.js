@@ -1,3 +1,4 @@
+import { getIcon } from "./getIcon.js";
 import { getWeekday } from "./getWeekday.js";
 
 function otherDays(thisWeek) {
@@ -23,11 +24,11 @@ function otherDays(thisWeek) {
 
         // creating child node
         const valueSection = document.createElement("div");
-        const condition = document.createElement("div");
+        const condition = document.createElement("img");
         
         // assigning value to child node
         valueSection.textContent = value;
-        condition.textContent = status;
+        condition.src = getIcon(status);
 
         // appending child node to parent
         div.appendChild(valueSection);
