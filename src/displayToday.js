@@ -4,10 +4,6 @@ import { getWeekday } from "./getWeekday.js";
 function displayToday(todayData) {
 
     //todo
-    // get value of description
-    // fetch the icon related to description
-    // add the image into div
-    // push the div into the container
     // add styles to the container
 
     // query selectors
@@ -21,8 +17,6 @@ function displayToday(todayData) {
     const today = document.createElement("div");
     const place = document.createElement("div");
     const heading = document.createElement("h3");
-    
-    // need to fix this
     const condition = document.createElement("img");
     
 
@@ -40,8 +34,6 @@ function displayToday(todayData) {
     today.textContent = "Day: " + day;
     heading.textContent = "Weather data for today"
     place.textContent = "Location: " + inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
-    
-    //need to fix this
     condition.src = getIcon(status);
 
     // appending to parent node
