@@ -20,7 +20,7 @@ function otherDays(thisWeek) {
         //converting date into day of week and storing it appropriately
         let weekDay = getWeekday(new Date(day["datetime"])); 
         let value = weekDay + " : " + day["temp"];
-        let status = day["conditions"];
+        let status = day["icon"];
 
         // creating child node
         const valueSection = document.createElement("div");
@@ -28,7 +28,7 @@ function otherDays(thisWeek) {
         
         // assigning value to child node
         valueSection.textContent = value;
-        condition.src = getIcon(status);
+        condition.src = getIcon(status); // not working somehow
 
         // appending child node to parent
         div.appendChild(valueSection);
