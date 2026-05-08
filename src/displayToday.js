@@ -57,8 +57,9 @@ function displayToday(todayData) {
     // appending to parent node
     div.appendChild(heading);
     div.appendChild(grp1);
-    div.appendChild(grp3);
     div.appendChild(condition);
+    div.appendChild(grp3);
+    
     
 }
 
