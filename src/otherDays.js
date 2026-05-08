@@ -25,6 +25,7 @@ function otherDays(thisWeek) {
         // creating child node
         const valueSection = document.createElement("div");
         const condition = document.createElement("img");
+        condition.className = "otherCondition"
         
         // assigning value to child node
         valueSection.textContent = value;
