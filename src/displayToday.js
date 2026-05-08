@@ -17,7 +17,8 @@ function displayToday(todayData) {
     const today = document.createElement("div");
     const place = document.createElement("div");
     const heading = document.createElement("h3");
-    const condition = document.createElement("img");    
+    const condition = document.createElement("img");  
+    const body = document.createElement("div");  
 
     // assigning variables to hold values
     let temp = todayData["temp"];
@@ -53,12 +54,15 @@ function displayToday(todayData) {
     grp3.appendChild(grp2);
     grp3.appendChild(temperature)
 
+    body.className = "bodyClass";
+    body.appendChild(grp1);
+    body.appendChild(condition);
+    body.appendChild(grp3);
+
 
     // appending to parent node
     div.appendChild(heading);
-    div.appendChild(grp1);
-    div.appendChild(condition);
-    div.appendChild(grp3);
+    div.appendChild(body);
     
     
 }
