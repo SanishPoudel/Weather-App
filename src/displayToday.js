@@ -17,8 +17,7 @@ function displayToday(todayData) {
     const today = document.createElement("div");
     const place = document.createElement("div");
     const heading = document.createElement("h3");
-    const condition = document.createElement("img");
-    
+    const condition = document.createElement("img");    
 
     // assigning variables to hold values
     let temp = todayData["temp"];
@@ -35,14 +34,30 @@ function displayToday(todayData) {
     heading.textContent = "Weather data for today"
     place.textContent = "Location: " + inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
     condition.src = getIcon(status);
+    condition.className = "mainCondition";
+
+    // add a new wrapper for location + day , another for minman and another for temp
+    // add class for img
+    const grp1 = document.createElement("div");
+    grp1.className = "grp1";
+    grp1.appendChild(place);
+    grp1.appendChild(today);
+
+    const grp2 = document.createElement("div");
+    grp2.className = "grp2";
+    grp2.appendChild(maxTemp);
+    grp2.appendChild(minTemp);
+
+    const grp3 = document.createElement("div");
+    grp3.className = "grp3"
+    grp3.appendChild(grp2);
+    grp3.appendChild(temperature)
+
 
     // appending to parent node
     div.appendChild(heading);
-    div.appendChild(place);
-    div.appendChild(today);
-    div.appendChild(temperature);
-    div.appendChild(maxTemp);
-    div.appendChild(minTemp);
+    div.appendChild(grp1);
+    div.appendChild(grp3);
     div.appendChild(condition);
     
 }
