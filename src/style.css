@@ -38,14 +38,15 @@ button {
     border-color: #eb6f4c;
 }
 
-/* for flex */
-
 .main {
     display: flex;
     font-size: xx-large;
     font-weight: bold;
     color: #1e212d;
     border: 1px solid black;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .other {
@@ -70,14 +71,13 @@ button {
 
 .grp1 {
     display: flex;
-    justify-content: center;
     border: 1px solid black;
     flex-direction: column;
     gap: 5px
 }
 
 img.mainCondition, img.otherCondition {
-    height: 85px;
+    height: 165px;
 }
 
 .grp2 {
