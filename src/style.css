@@ -47,7 +47,6 @@ button {
     font-weight: bold;
     color: #1e212d;
     text-align: center;
-    align-items: flex-start;
 }
 
 .other {
@@ -66,4 +65,29 @@ button {
     justify-content: center;
     align-items: center;
     margin: 5%;
+}
+
+.grp1 {
+    display: flex;
+    justify-content: center;
+}
+
+img.mainCondition, img.otherCondition {
+    height: 65px;
+}
+
+.grp2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.grp3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bodyClass {
+    display: flex;
+    justify-content: space-evenly;
 }
