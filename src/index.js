@@ -39,10 +39,4 @@ btn.addEventListener("click", (event)=> {
     clearDiv(main);
     clearDiv(other);
     getData(inputValue.value);
-
-    content.style.display = "grid";
-    content.style["grid-template-column"] = "2fr 0.5fr 2fr";
-    main.style["grid-column"] = "1/3";
-    other.style["grid-column"] = "3/3";
-    content.style.gap = "10%";
 });
