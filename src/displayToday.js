@@ -3,9 +3,6 @@ import { getWeekday } from "./getWeekday.js";
 
 function displayToday(todayData) {
 
-    //todo
-    // add styles to the container
-
     // query selectors
     const inputValue = document.querySelector("input");
     const div = document.querySelector(".main");
@@ -18,7 +15,6 @@ function displayToday(todayData) {
     const place = document.createElement("div");
     const heading = document.createElement("h3");
     const condition = document.createElement("img");  
-    const body = document.createElement("div");  
 
     // assigning variables to hold values
     let temp = todayData["temp"];
@@ -32,13 +28,11 @@ function displayToday(todayData) {
     maxTemp.textContent = "↓" + tempmax;
     minTemp.textContent = "↑" + tempmin;
     today.textContent = day;
-    heading.textContent = "Weather data for today"
     place.textContent =  inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
     condition.src = getIcon(status);
     condition.className = "mainCondition";
 
-    // add a new wrapper for location + day , another for minman and another for temp
-    // add class for img
+
     const grp1 = document.createElement("div");
     grp1.className = "grp1";
     grp1.appendChild(place);
@@ -54,17 +48,9 @@ function displayToday(todayData) {
     grp3.appendChild(grp2);
     grp3.appendChild(temperature)
 
-    body.className = "bodyClass";
-    body.appendChild(grp1);
-    body.appendChild(condition);
-    body.appendChild(grp3);
-
-
-    // appending to parent node
-    div.appendChild(heading);
-    div.appendChild(body);
-    
-    
+    div.appendChild(grp1);
+    div.appendChild(condition);
+    div.appendChild(grp3);
 }
 
 export { displayToday }
