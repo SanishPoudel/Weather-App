@@ -28,12 +28,12 @@ function displayToday(todayData) {
     let status = todayData["icon"];
 
     // adding variable to the dom
-    temperature.textContent = "Temperature: " + temp;
-    maxTemp.textContent = "Maximum temperature: " + tempmax;
-    minTemp.textContent = "Minimum temperature: " + tempmin;
-    today.textContent = "Day: " + day;
+    temperature.textContent =  temp;
+    maxTemp.textContent = "↓" + tempmax;
+    minTemp.textContent = "↑" + tempmin;
+    today.textContent = day;
     heading.textContent = "Weather data for today"
-    place.textContent = "Location: " + inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
+    place.textContent =  inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
     condition.src = getIcon(status);
     condition.className = "mainCondition";
 
