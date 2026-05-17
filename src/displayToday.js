@@ -29,6 +29,7 @@ function displayToday(todayData) {
     minTemp.textContent = "↓" + tempmin;
     today.textContent = day;
     place.textContent =  inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
+    place.className = "location";
     condition.src = getIcon(status);
     condition.className = "mainCondition";
 
