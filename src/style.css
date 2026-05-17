@@ -81,7 +81,6 @@ img.mainCondition {
 .grp2 {
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid black;
     gap: 5px;
 }
 
@@ -89,7 +88,6 @@ img.mainCondition {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid black;
 }
 
 img.otherCondition {
