@@ -34,6 +34,7 @@ function otherDays(thisWeek) {
         // appending child node to parent
         div.appendChild(valueSection);
         div.appendChild(condition);
+        div.style["border"] = "1px solid black";
     }
 }
 
