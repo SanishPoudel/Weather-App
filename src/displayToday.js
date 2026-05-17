@@ -51,7 +51,11 @@ function displayToday(todayData) {
     div.appendChild(grp1);
     div.appendChild(condition);
     div.appendChild(grp3);
+    
+    // adding styles
     div.style["border"] = "1px solid black";
+    div.style["background-color"] = "#ffd9c7";
+    div.style["box-shadow"] = "2px 2px 2px gray";
 }
 
 export { displayToday }
