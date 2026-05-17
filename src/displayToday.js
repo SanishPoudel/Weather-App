@@ -51,6 +51,7 @@ function displayToday(todayData) {
     div.appendChild(grp1);
     div.appendChild(condition);
     div.appendChild(grp3);
+    div.style["border"] = "1px solid black";
 }
 
 export { displayToday }
