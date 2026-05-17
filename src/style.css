@@ -43,7 +43,6 @@ button {
     font-size: xx-large;
     font-weight: bold;
     color: #1e212d;
-    border: 1px solid black;
     gap: 20px;
     padding: 20px;
     border-radius: 8px;
@@ -57,7 +56,6 @@ button {
     color: #1e212d;
     text-align: center;
     align-items: flex-start;
-    border: 1px solid black;
 }
 
 .content {
@@ -66,7 +64,6 @@ button {
     justify-content: center;
     align-items: center;
     margin: 5%;
-    border: 1px solid black;
 }
 
 .grp1 {
