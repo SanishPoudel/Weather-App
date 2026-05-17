@@ -39,11 +39,14 @@ btn.addEventListener("click", async (event)=> {
     if (inputValue.value) {
         clearDiv(main);
         clearDiv(other);
+        main.classList.remove("afterClick");
+        
         
         let load = document.querySelector(".spinner");
         load.hidden = false;
         await getData(inputValue.value);
         load.hidden = true;
+        
     } else {
         alert("Please enter a city before searching.");
     }
