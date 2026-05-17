@@ -1,6 +1,7 @@
 import "./style.css";
 import { displayToday } from "./displayToday.js";
 import { otherDays } from "./otherDays.js";
+import spinner from "./img/spinner.svg";
 
 const main = document.querySelector(".main");
 const other = document.querySelector(".other");
@@ -16,13 +17,12 @@ async function getData(city) {
 
     let weatherData = value["days"];
     let todayData = weatherData[0];
-    
     let thisWeek = [];
     for (let i = 0; i<7; i++) {
         thisWeek[i] = weatherData[i];
     }
     console.log(thisWeek);
-    
+
     displayToday(todayData);
     otherDays(thisWeek);
 }
@@ -34,12 +34,16 @@ function clearDiv(div) {
     }
 }
 
-btn.addEventListener("click", (event)=> {
+btn.addEventListener("click", async (event)=> {
     event.preventDefault();
     if (inputValue.value) {
         clearDiv(main);
         clearDiv(other);
-        getData(inputValue.value);
+        
+        let load = document.querySelector(".spinner");
+        load.hidden = false;
+        await getData(inputValue.value);
+        load.hidden = true;
     } else {
         alert("Please enter a city before searching.");
     }
