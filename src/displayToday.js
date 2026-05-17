@@ -25,8 +25,8 @@ function displayToday(todayData) {
 
     // adding variable to the dom
     temperature.textContent =  temp;
-    maxTemp.textContent = "↓" + tempmax;
-    minTemp.textContent = "↑" + tempmin;
+    maxTemp.textContent = "↑" + tempmax;
+    minTemp.textContent = "↓" + tempmin;
     today.textContent = day;
     place.textContent =  inputValue.value.charAt(0).toUpperCase() + inputValue.value.slice(1);
     condition.src = getIcon(status);
