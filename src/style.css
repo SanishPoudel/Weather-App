@@ -81,7 +81,7 @@ img.mainCondition {
 .grp2 {
     display: flex;
     justify-content: space-evenly;
-    gap: 5px;
+    gap: 20px;
 }
 
 .grp3 {
