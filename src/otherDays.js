@@ -7,34 +7,39 @@ function otherDays(thisWeek) {
     //query selector
     const div = document.querySelector(".other");
 
-    //heading
-    const heading = document.createElement("h3");
-    heading.textContent = "Weather data for upcoming days";
-    div.appendChild(heading);
-
     for (let i = 1; i<7; i++) {
         // using for loop instead of forEach because I don't need sunday
 
         let day = thisWeek[i]; 
+        let tempSection = document.createElement("div");
+        let weekBox = document.createElement("div");
 
         //converting date into day of week and storing it appropriately
         let weekDay = getWeekday(new Date(day["datetime"])); 
-        let value = weekDay + " : " + day["temp"];
+        let value = weekDay
         let status = day["icon"];
 
         // creating child node
         const valueSection = document.createElement("div");
         const condition = document.createElement("img");
-        condition.className = "otherCondition"
+        
+        // adding classes
+        weekBox.className = "weekBox";
+        condition.className = "otherCondition";
+        
         
         // assigning value to child node
+        tempSection.textContent = day["temp"];
         valueSection.textContent = value;
-        condition.src = getIcon(status); // not working somehow
+        condition.src = getIcon(status); 
 
-        // appending child node to parent
-        div.appendChild(valueSection);
-        div.appendChild(condition);
-        div.style["border"] = "1px solid black";
+        // appending child node to weekbox
+        weekBox.appendChild(valueSection);
+        weekBox.appendChild(condition);
+        weekBox.appendChild(tempSection);
+
+        // appending to parent node
+        div.appendChild(weekBox);
     }
 }
 
