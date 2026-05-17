@@ -111,3 +111,8 @@ img.otherCondition {
     background-color: #ffd9c7;
     box-shadow: 2px 2px 2px gray;
 }
+
+.location {
+    font-size: xx-large;
+    font-weight: bold;
+}
