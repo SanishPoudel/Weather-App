@@ -69,7 +69,6 @@ button {
 
 .grp1 {
     display: flex;
-    border: 1px solid black;
     flex-direction: column;
     gap: 5px
 }
