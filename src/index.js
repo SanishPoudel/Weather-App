@@ -36,7 +36,11 @@ function clearDiv(div) {
 
 btn.addEventListener("click", (event)=> {
     event.preventDefault();
-    clearDiv(main);
-    clearDiv(other);
-    getData(inputValue.value);
+    if (inputValue.value) {
+        clearDiv(main);
+        clearDiv(other);
+        getData(inputValue.value);
+    } else {
+        alert("Please enter a city before searching.");
+    }
 });
