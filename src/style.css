@@ -107,3 +107,9 @@ img.otherCondition {
 .spinner {
     height: 20vh;
 }
+
+.afterClick {
+    border: 1px solid black;
+    background-color: #ffd9c7;
+    box-shadow: 2px 2px 2px gray;
+}
